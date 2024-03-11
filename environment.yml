@@ -1,0 +1,46 @@
+name: cbig
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - snakemake
+  - dcm2niix
+  - h5py 
+  - hdf5 
+  - jupyterlab 
+  - matplotlib 
+  - numba 
+  - numpy 
+  - pandas==1.4.4
+  - scikit-learn 
+  - scipy 
+  - statsmodels 
+  - git 
+  - git-annex 
+  - git-lfs 
+  - ncdu 
+  - nibabel 
+  - nilearn 
+  - nipype 
+  - rclone 
+  - rsync 
+  - sshpass 
+  - fslpy 
+  - tmux 
+  - seaborn 
+  - ipywidgets 
+  - pyyaml 
+  - datalad 
+  - jq 
+  - ipywidgets 
+  - jupyter 
+  - tqdm 
+  - qgrid 
+  - pingouin 
+  - cookiecutter 
+  - termcolor 
+  - openpyxl
+  - parallel
+  - pip:
+    - tedana
+    - heudiconv
