@@ -5,14 +5,10 @@ Notes:
 ## Data Prep
 - Data should be in BIDS format under a folder '/data/' inside the cbig directory
 
-
-```
-
 ## Run the pipeline!
 The pipeline is coordinated using [Snakemake](https://github.com/snakemake/snakemake) which automatically calculates what steps need to be run in order to produce a desired file. Since we want to produce the target coordinates, we tell Snakemake to produce `data/target/sub-00_ses-pre/sub_target_primary.txt`
 
 data/target/sub-00_ses-pre/sub_target_backup/txt can also be produced; this will use a more conservative brain mask to exclude coordinates where TMS may be too uncomfortable. See masks under the standard_data folder
-
 
 ```
 csh
