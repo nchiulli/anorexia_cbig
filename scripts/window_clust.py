@@ -1,9 +1,9 @@
 from cluster_cog import top_cluster
 from nilearn import image
 import sys
-from nimlab import connectomics as cs
-from nimlab import functions as fn
-from random import randrange
+import connectomics as cs
+import functions as fn
+import randrange
 
 
 tc = image.load_img(sys.argv[1])
