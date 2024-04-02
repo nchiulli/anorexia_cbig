@@ -1,8 +1,8 @@
 import json
 from datetime import datetime
-from nimlab import connectomics as cs
-from nimlab import functions as fn
-from nimlab import datasets as ds
+import connectomics as cs
+import functions as fn
+import datasets as ds
 from nilearn import image, maskers
 from numpy.linalg import inv
 from scipy import stats
