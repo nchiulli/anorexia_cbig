@@ -12,8 +12,8 @@ from numba import jit
 import time
 import os
 from tqdm import tqdm
-from nimlab import functions as nimfs
-from nimlab import datasets as ds
+import functions as nimfs
+import datasets as ds
 from nilearn import maskers
 from queue import Queue
 from scipy import stats
