@@ -1,6 +1,6 @@
-from nimlab import functions as fn
-from nimlab import datasets as ds
-from nimlab import connectomics as cs
+import functions as fn
+import datasets as ds
+import connectomics as cs
 import os
 from nilearn import image, maskers
 from tqdm import tqdm
