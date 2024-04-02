@@ -1,4 +1,4 @@
-from nimlab import functions as fn
+import functions as fn
 from nilearn import image
 import sys
 from glob import glob
