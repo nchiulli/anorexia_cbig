@@ -1,0 +1,60 @@
+{
+    "name": "connectivity",
+    "entities": [
+        {
+            "name": "subject",
+            "pattern": "[/\\\\]+sub-([a-zA-Z0-9]+)",
+            "directory": "{subject}"
+        },
+        {
+            "name": "hemisphere",
+            "pattern": "[_/\\\\]+hemi-([a-zA-Z0-9]+)"
+        },
+        {
+            "name": "description",
+            "pattern": "[_/\\\\]+desc-([a-zA-Z0-9]+)"
+        },
+        {
+            "name": "simulation",
+            "pattern": "[_/\\\\]+sim-([a-zA-Z0-9]+)"
+        },
+        {
+            "name": "model",
+            "pattern": "[_/\\\\]+model-([a-zA-Z0-9]+)"
+        },
+        {
+            "name": "dataset",
+            "pattern": "[_/\\\\]+dataset-([a-zA-Z0-9]+)"
+        },
+        {
+            "name": "extension",
+            "pattern": "[._]*[a-zA-Z0-9]*?(\\.[^/\\\\]+)$"
+        },
+        {
+            "name": "datatype",
+            "pattern": "[/\\\\]+(prefs|reconstruction|stimulations)[/\\\\]+"
+        },
+        {
+            "name": "template_space",
+            "pattern": "[/\\\\]+(MNI152NLin2009bAsym)[/\\\\]+"
+        },
+        {
+            "name": "suite",
+            "pattern": "[/\\\\]+(leaddbs|leadgroup)[/\\\\]+"
+        },
+        {
+            "name": "leaddbs_analysisnum",
+            "pattern": "[/\\\\]+gs_([0-9]+)[/\\\\]+"
+        },
+        {
+            "name": "leadgroup_analysisnum",
+            "pattern": "[/\\\\]+([0-9]+)[/\\\\]+|[/\\\\]+analysis-([0-9]+)"
+        }
+    ],
+    "default_path_patterns": [
+        "{suite<leaddbs>}/sub-{subject}/{datatype<prefs>}/sub-{subject}_desc-{description}{extension<.json|.mat>}",
+        "{suite<leaddbs>}/sub-{subject}/{datatype<reconstruction>}/sub-{subject}_desc-{description}{extension<.mat>}",
+        "{suite<leaddbs>}/sub-{subject}/{datatype<stimulations>}/{template_space}/{leaddbs_analysisnum}/sub-{subject}_sim-{simulation}_model-{model}_hemi-{hemisphere}{extension<.nii|.mat>}",
+        "{suite<leadgroup>}/{leadgroup_analysisnum}/dataset-{dataset}_analysis-{leadgroup_analysisnum}{extension<.mat>}"
+    ]
+}
